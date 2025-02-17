@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Onboarding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Developer Onboarding Portal</h1>
+    </header>
+
+    <main>
+        <!-- Account Creation Section -->
+        <section id="account-creation">
+            <h2>Create Your Account</h2>
+            <form id="account-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Create Account</button>
+            </form>
+        </section>
+
+        <!-- Onboarding Section (after account creation) -->
+        <section id="onboarding" style="display: none;">
+            <h2>Complete Your Onboarding</h2>
+            <form id="onboarding-form">
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role" required>
+
+                <label for="experience">Experience Level:</label>
+                <select id="experience" name="experience" required>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+
+                <label for="languages">Programming Languages Known:</label>
+                <input type="text" id="languages" name="languages" placeholder="e.g., Python, JavaScript" required>
+
+                <button type="submit">Complete Onboarding</button>
+            </form>
+        </section>
+
+        <!-- Personalized Recommendations Section -->
+        <section id="recommendations" style="display: none;">
+            <h2>Recommended Resources</h2>
+            <ul id="resource-list">
+                <!-- Resources will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Developer Onboarding</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
