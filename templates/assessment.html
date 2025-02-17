@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment</title>
+</head>
+<body>
+    <h1>Your Skill Level: {{ level }}</h1>
+    <h2>Recommended LeetCode Questions:</h2>
+    <ul>
+        {% for question in questions %}
+            <li>{{ question }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

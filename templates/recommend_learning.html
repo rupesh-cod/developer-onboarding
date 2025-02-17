@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Learning Path</title>
+</head>
+<body>
+    <h1>Your Recommended Learning Path</h1>
+    <ul>
+        {% for module in learning_path %}
+            <li>{{ module }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

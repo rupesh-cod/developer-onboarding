@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile List</title>
+</head>
+<body>
+    <h1>Your Developer Profiles</h1>
+    <ul>
+        {% for profile in profiles %}
+            <li>{{ profile.name }} - {{ profile.skills }} - {{ profile.preferred_language }} - {{ profile.learning_style }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
