@@ -1,0 +1,213 @@
+/* Importing a modern, clean font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern and clean font */
+    background-color: #1E1E1E; /* Abyss theme background color */
+    color: #D4D4D4; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+    background-image: url('bg.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center center;
+}
+
+//* Header Styling */
+header {
+    width: 100%;
+    padding: 25px;
+    background-color: #252526; /* Dark Abyss gray */
+    color: #61AFEF; /* Cyan color for heading text */
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #61AFEF; /* Cyan for artistic heading */
+    opacity: 0;
+    transform: scale(0.9); /* Start slightly scaled down */
+    animation: fadeInScale 1s ease-out forwards; /* Fade and scale transition */
+}
+
+/* Smooth heading fade-in and scale transition */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9); /* Slightly smaller at first */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Fully visible and normal size */
+    }
+}
+
+/* Main section Styling */
+main {
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 40px;
+    background-color: #2D2D30; /* Darker gray for section background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    animation: fadeInSection 1s ease-out forwards;
+}
+
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #61AFEF; /* Cyan color for headings */
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #BEBEBE; /* Lighter gray for labels */
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+input, select {
+    padding: 12px;
+    margin-top: 12px;
+    font-size: 1.2rem;
+    border: 1px solid #444; /* Dark border */
+    border-radius: 8px;
+    background-color: #252526; /* Abyss dark background for inputs */
+    color: #D4D4D4; /* Light gray text */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    background-color: #333; /* Darker background on focus */
+    outline: none;
+    border-color: #61AFEF; /* Cyan border on focus */
+}
+
+input:focus + label, select:focus + label {
+    font-size: 1.1rem;
+    top: -30px;
+    left: 12px;
+    color: #61AFEF; /* Cyan label on focus */
+}
+
+/* Button Styling */
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #61AFEF, #4E4EFF); /* Cyan and violet gradient */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #4E4EFF, #61AFEF); /* Reverse gradient on hover */
+    transform: scale(1.02);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Recommendations Section */
+#recommendations ul {
+    list-style-type: none;
+}
+
+#recommendations li {
+    background: #2D2D30; /* Same dark gray for recommendations */
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#recommendations li:hover {
+    background-color: #61AFEF; /* Cyan hover effect */
+    transform: scale(1.02);
+}
+
+#recommendations li:hover a {
+    color: #1E1E1E; /* Darken link color on hover */
+}
+
+/* Footer Styling */
+footer {
+    background: #1E1E1E;
+    color: #D4D4D4;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+footer span {
+    color: #61AFEF; /* Highlight names with cyan */
+    font-weight: bold;
+}
+
+footer span:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
