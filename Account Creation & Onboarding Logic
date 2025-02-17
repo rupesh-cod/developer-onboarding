@@ -1,0 +1,68 @@
+// Wait for the page to load
+document.addEventListener("DOMContentLoaded", function () {
+    const accountForm = document.getElementById("account-form");
+    const onboardingForm = document.getElementById("onboarding-form");
+    const recommendationsSection = document.getElementById("recommendations");
+    const resourceList = document.getElementById("resource-list");
+    const onboardingSection = document.getElementById("onboarding");
+    const accountCreationSection = document.getElementById("account-creation");
+
+    // Handle account creation
+    accountForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+        const email = document.getElementById("email").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Simulate account creation and store user details (you will connect to backend here)
+        localStorage.setItem("user", JSON.stringify({ email, username, password }));
+
+        // After account creation, show the onboarding form
+        accountCreationSection.style.display = "none";
+        onboardingSection.style.display = "block";
+    });
+
+    // Handle onboarding form submission
+    onboardingForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent page reload
+        const role = document.getElementById("role").value;
+        const experience = document.getElementById("experience").value;
+        const languages = document.getElementById("languages").value.split(',');
+
+        // Simulate sending onboarding data (you can send this to backend via API)
+        localStorage.setItem("onboardingData", JSON.stringify({ role, experience, languages }));
+
+        // Show recommendations based on the inputs
+        const resources = getRecommendedResources(languages, experience);
+        displayResources(resources);
+
+        // Show the recommendations section
+        onboardingSection.style.display = "none";
+        recommendationsSection.style.display = "block";
+    });
+
+    // Function to simulate resource recommendations based on experience
+    function getRecommendedResources(languages, experience) {
+        let resources = [];
+        if (languages.includes("Python")) {
+            if (experience === "beginner") {
+                resources.push("Python for Beginners: Introduction");
+            } else if (experience === "intermediate") {
+                resources.push("Intermediate Python: Data Structures");
+            } else {
+                resources.push("Advanced Python: Machine Learning with Python");
+            }
+        }
+        return resources;
+    }
+
+    // Function to display resources dynamically
+    function displayResources(resources) {
+        resourceList.innerHTML = ''; // Clear any previous resources
+        resources.forEach(resource => {
+            const li = document.createElement("li");
+            li.textContent = resource;
+            resourceList.appendChild(li);
+        });
+    }
+});
