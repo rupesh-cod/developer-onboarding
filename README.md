@@ -5,7 +5,7 @@ By leveraging AI-driven insights, the platform ensures an efficient, engaging, a
 
 Features:
 Secure authentication with bcrypt
-Onboarding to track user skills
+Onboarding to track user skills
 GitHub integration for skill analysis
-networkx-based recommendations
+Networkx-based recommendations
 
