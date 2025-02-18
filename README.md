@@ -4,8 +4,8 @@ This open-ended challenge invites novel, user-centric strategies to boost early-
 By leveraging AI-driven insights, the platform ensures an efficient, engaging, and adaptive onboarding experience for early-career developers.
 
 Features:
-Secure authentication with bcrypt
-Onboarding to track user skills
-GitHub integration for skill analysis
+Secure authentication with bcrypt,
+Onboarding to track user skills,
+GitHub integration for skill analysis,
 Networkx-based recommendations
 
